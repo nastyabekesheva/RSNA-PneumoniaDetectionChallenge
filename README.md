@@ -18,13 +18,15 @@ If you don't have Docker [click here to download](https://www.docker.com/product
 docker image build -t rsna:0.0.1 /path/to/this/dir
 ```
 
+![Screenshot](dockerscreen1.jpeg)
+
 #### Step 2: Verify the Image Build
 
 ```
 docker images
 ```
 
-//add pic here later
+![Screenshot](dockerscreen2.jpeg)
 
 #### Step 3: Running the Docker Container
 
