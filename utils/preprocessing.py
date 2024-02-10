@@ -48,7 +48,7 @@ def save_label(label_dir, patient_id, bbox):
     f.write(line)
     f.close()
 
-def main():
+def main(path):
     if len(sys.argv) < 2:
         print("Usage: python preprocessing.py <path_to_file>")
         return
