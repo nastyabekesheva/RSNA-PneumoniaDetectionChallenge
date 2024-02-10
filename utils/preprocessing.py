@@ -1,6 +1,5 @@
 import pandas as pd
 import os
-import opendatasets as od
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 import pydicom
@@ -55,9 +54,9 @@ def main(path):
     dataset_path = sys.argv[1]
 
     # paths
-    CSV_FILE = dataset_path + 'stage_2_train_labels.csv'
-    TRAIN_SRC_DIR = dataset_path + 'stage_2_train_images/'
-    TEST_SRC_DIR = dataset_path + 'stage_2_test_images/'
+    CSV_FILE = dataset_path + '/stage_2_train_labels.csv'
+    TRAIN_SRC_DIR = dataset_path + '/stage_2_train_images/'
+    TEST_SRC_DIR = dataset_path + '/stage_2_test_images/'
     DATASET_DIR = './dataset/'
     TEST_IMG_DIR = 'test_images/'
 
