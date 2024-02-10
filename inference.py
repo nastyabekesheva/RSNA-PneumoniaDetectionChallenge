@@ -1,9 +1,11 @@
 import sys
-
 import os
+
 from ultralytics import YOLO
+from utils.coordinates import center_to_left_corner
 
 MODEL_PATH = './weights/best.pt'
+
 
 def main():
     if len(sys.argv) < 2:
@@ -11,6 +13,7 @@ def main():
         return
     dataset_path = sys.argv[1]
 
+    print('Loading model...')
     model = YOLO(MODEL_PATH)
 
     print('Running inference...\n')
@@ -24,13 +27,14 @@ def main():
         file.write("patientId,PredictionString\n")
         for result in results:
             line = get_id_from_path(result.path) + ','
-            
+
             for conf, xywh in zip(result.boxes.conf, result.boxes.xywh):
-                x, y, w, h = xywh
+                x, y, w, h = center_to_left_corner(xywh)
                 line += f"{conf:.2f} {x:.2f} {y:.2f} {w:.2f} {h:.2f} "
-                
+
             line = line.strip()
-            file.write(line+"\n")
+            file.write(line + "\n")
+
 
 if __name__ == "__main__":
     main()
