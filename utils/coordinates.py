@@ -1,6 +1,34 @@
 IMG_SIZE = 1024
 
 
+def center_to_left_corner(bbox: tuple[float, float, float, float]) -> tuple[float, float, float, float]:
+    """
+    Translate the bbox from absolute centered coordinates to absolute left corner
+    :param bbox: tuple(x, y, w, h) (absolute; centered)
+    :return: tuple(x, y, w, h) (absolute; left corner)
+    """
+    x = (bbox[0] - bbox[2] / 2)
+    y = (bbox[1] - bbox[3] / 2)
+    w = bbox[2]
+    h = bbox[3]
+
+    return x, y, w, h
+
+
+def left_corner_to_center(bbox: tuple[float, float, float, float]) -> tuple[float, float, float, float]:
+    """
+    Translate the bbox from absolute left corner to absolute centered coordinates
+    :param bbox:
+    :return:
+    """
+    x = (bbox[0] + bbox[2] / 2)
+    y = (bbox[1] + bbox[3] / 2)
+    w = bbox[2]
+    h = bbox[3]
+
+    return x, y, w, h
+
+
 def translate_bbox(bbox: tuple[float, float, float, float]) -> tuple[float, float, float, float]:
     """
     Translate the bbox from absolute left corner to relative centered coordinates
