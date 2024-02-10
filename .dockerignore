@@ -1,6 +1,10 @@
 .git
 yolo8-detection-with-submission.ipynb
 kaggle.json
-weights
 venv
-utils
+dataset*
+images
+submissions
+test_set*
+rsna-pneumonia-detection-challenge.zip
+download.ipynb
