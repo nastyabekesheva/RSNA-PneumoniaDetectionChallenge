@@ -11,7 +11,7 @@ def main():
     dataset_path = sys.argv[1]
 
     print("Preprocessing dataset...")
-    utils.preprocessing(dataset_path)
+    utils.preprocessing.main(dataset_path)
     
     model = YOLO('yolov8l.pt')
     wandb.login(key='da27b138f0f392e3f931cf71acdab08543ac649c')
