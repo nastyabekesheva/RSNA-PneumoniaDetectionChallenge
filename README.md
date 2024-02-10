@@ -43,7 +43,7 @@ We decided to explore versions of YOLO model, here is what we noted about the pe
 | yolov8m.pt | 3 | 0.12076 |
 | yolov8.pt | 6 | 0.13297 |
 
-2. Training the model:
+2. Training the model: Based on previous analysis we decided to train 'yolov8l.pt' model. Result are saved in weighs/best.pt
 
 -----
 
