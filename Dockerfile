@@ -16,7 +16,10 @@ RUN #pip install opencv-python
 RUN pip install -r requirements.txt
 
 COPY ./weights/best.pt ./weights/best.pt
-COPY ./utils/coordinates.py ./utils/coordinates.py
+COPY ./utils/coordinates.py ./utils/
+COPY ./utils/iou_utils.py ./utils/
+COPY ./utils/morph_boxes.py ./utils/
+
 
 COPY inference.py /
 ENTRYPOINT ["python", "inference.py"]
