@@ -164,3 +164,4 @@ test_images/
 input/
 
 kaggle.json
+/rsna-pneumonia-detection-challenge.zip
