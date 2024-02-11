@@ -41,7 +41,7 @@ We decided to explore versions of YOLO model, here is what we noted about the pe
 | yolov8n.yaml |           1           |  0.11745  |
 |  yolov8s.pt  |          1.5          |  0.12608  |
 |  yolov8m.pt  |           3           |  0.12076  |
-|  yolov8.pt   |           6           |  0.13297  |
+|  yolov8l.pt  |           6           |  0.13297  |
 | yolov8l.yaml |           6           |  0.12437  |
 
 2. Training the model: Based on previous analysis we decided to train 'yolov8l.pt' model. Model is saved in
