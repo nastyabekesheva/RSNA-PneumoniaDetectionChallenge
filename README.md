@@ -88,7 +88,14 @@ the container.
 git clone https://github.com/nastyabekesheva/RSNA-PneumoniaDetectionChallenge.git
 ```
 
-#### Step 1: Run inference.py
+#### Step 1: Install requirements
+
+```
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+#### Step 2: Run inference.py
 
 Before running the script, navigate to the directory you wish submissions.csv to be saved in.
 
