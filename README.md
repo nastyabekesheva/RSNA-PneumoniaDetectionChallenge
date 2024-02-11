@@ -2,12 +2,25 @@
 
 ## Table of contents
 
+- [Project structure](#Project-structure)
 - [Preprocessing](#Preprocessing)
 - [Training](#Training)
 - [Running a model (Docker)](#Running-a-model)
 - [Running a model (locally)](#Running-a-model-(locally))
 
 -----
+
+## Description
+
+RSNA Pneumonia Detection Challenge is a problem of object detection with one class: the task is to predict coordinates of bounding boxes for all pneumonia/lung occlusion areas on x-ray images. The training dataset contains ~6k images with pneumonia with total of ~10k instanses, and ~20k images without pneumonia (backgrounds). The test dataset contains 3k images. All the images are 1024x1024 px and in dcm format. CSV file with labels is provided containing information about both positive and negative examples, where each line represents patient ID and coordinates of one bounding box. The challenge provides and accepts coordinates in format [top-left-x, top-left-y, width, height] in pixels.
+
+## SUMMARY
+
+The solution proposed, impolements transfer learning with YOLOv8l (large) model, which was originally pretrained on COCO dataset. This model features advance technics of augmentation and optimization providing high level of abstarction on them. Solution includes dataset preparation, model finetuning, inference and visualization. In process of development thorough hyperparameter tuning was performed including training, inference parameters and augmentation experiments.
+
+The special feature of our solution is post inference processing which allows to collapse overlapping boxes thus mitigating the habit of the model to predict 2 boxes one inside the other for one particular pneumonia unit. It is tuned to a certain IoU threshold and if the threshold is exceeded, all the participant boxes are averaged into one boxes. This approach prooved to be more effective that inference parameter tuning and it actually works great with default YOLOv8 parameters. Although, the `conf` inference parameter is adjusted anyway, to provide for the best result on a test set.
+
+In the end the whole pipeline gives following result on a kaggle test set: `private score: 0.13777`, `public score: 0.05802`.
 
 ## Project structure
 
@@ -16,10 +29,10 @@
 - [`weights`](outputs) - Folder containing trained model weights.
 - [`train.py`](training.py) - Preprocessing and model training.
 - [`utils`](utils) - Folder with utility scripts used in training and inference.
-- [`yolo8l.pt`, `config.yaml`] - Pretrained model and configuration, essensial for training.
+- `yolo8l.pt`, `config.yaml` - Pretrained model and configuration, essensial for training.
 - [`Dockerfile`](Dockerfile) - Docker configuration file.
 
-### Preprocessing
+## Preprocessing
 
 1. Creating a dataset of images classified as 'pneumonia positive' and background images.
    Background images are images with no labelled pneumonia that are added to a dataset to reduce False Positives.
