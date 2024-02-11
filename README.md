@@ -14,7 +14,7 @@
 1. Creating a dataset of images classified as 'pneumonia positive' and background images.
    Background images are images with no labelled pneumonia that are added to a dataset to reduce False Positives.
 2. Splitting dataset into training and validation (90/10).
-3. Converted images from *.dcm to *.jpg (as our models trains on *.jpg).
+3. Converted images from *.dcm to *.jpg (as our model trains on *.jpg).
 4. Switched from left-bottom corner to relative center coordinates (again, model requirement).
 
 -----
@@ -44,8 +44,8 @@ We decided to explore versions of YOLO model, here is what we noted about the pe
 |  yolov8.pt   |           6           |  0.13297  |
 | yolov8l.yaml |           6           |  0.12437  |
 
-2. Training the model: Based on previous analysis we decided to train 'yolov8l.pt' model. Result are saved in
-   weighs/best.pt
+2. Training the model: Based on previous analysis we decided to train 'yolov8l.pt' model. Model is saved in
+   `weights/best.pt`
 
 -----
 
