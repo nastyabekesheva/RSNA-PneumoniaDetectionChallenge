@@ -67,12 +67,12 @@ In order for Docker to be able to access the dataset (which resides on your loca
 you need to mount the directory containing the files to the Docker container. This is done using the `--mount` flag and
 by providing Docker with `/your_home_dir`.
 
-Your local directory should contain a directory called `dataset` with *.dcm files inside.
+`/your_home_dir` should contain a directory called `dataset` with *.dcm files inside it.
 
 Everything else, including the `target=/mount_dir` **should remain the same**.
 
 ```
-docker run --mount type=bind,source=/your_home_dir,target=/mount_dir varcodex/shibarinu_pneumonia_inference:final /mount_dir
+docker run --mount type=bind,source=/your_home_dir,target=/mount_dir varcodex/shibarinu_pneumonia_inference:final
 ```
 
 #### Step 3: submissions.csv
