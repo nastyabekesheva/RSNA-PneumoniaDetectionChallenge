@@ -21,7 +21,7 @@ names:
 
 
 def train(transformed_dataset_path: str):
-    wandb.login(key='f69ae6e7564feaf1e47f90164e1b2f9598492168')
+    wandb.login(key='f69ae6e7564feaf1e47f90164e1b2f9598492168') # yes we committed our API key, but it's a free account so who cares
 
     write_config_yaml(transformed_dataset_path)
 
