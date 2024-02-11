@@ -54,7 +54,7 @@ def main():
     print('Loading model...')
     model = YOLO(MODEL_PATH)
 
-    results = model(jpg_dataset_path, verbose=False, stream=True)
+    results = model(jpg_dataset_path, verbose=False, stream=True, coef=0.26)
 
     def get_id_from_path(path):
         return splitext(basename(path))[0]
