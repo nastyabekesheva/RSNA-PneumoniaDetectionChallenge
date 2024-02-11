@@ -71,7 +71,8 @@ docker images
 #### Step 3: Running the Docker Container
 
 ```
-docker run rsna:0.0.1
+docker run -v /path/to/your/dataset:/input rsna:0.0.1 python inference.py /input
+
 ```
 ------
 
