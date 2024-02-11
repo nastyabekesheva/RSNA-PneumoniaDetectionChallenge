@@ -42,6 +42,7 @@ We decided to explore versions of YOLO model, here is what we noted about the pe
 | yolov8s.pt | 1.5 | 0.12608 |
 | yolov8m.pt | 3 | 0.12076 |
 | yolov8.pt | 6 | 0.13297 |
+| yolov8l.yaml | 6 | 0.12437 |
 
 2. Training the model: Based on previous analysis we decided to train 'yolov8l.pt' model. Result are saved in weighs/best.pt
 
@@ -52,10 +53,10 @@ We decided to explore versions of YOLO model, here is what we noted about the pe
 First of all make sure that you have installed the latest version of Docker!
 If you don't have Docker [click here to download](https://www.docker.com/products/docker-desktop/).
 
-#### Step 1: Building the Docker Container
+#### Step 1: Pulling the Docker Container
 
 ```
-docker image build -t rsna:0.0.1 /path/to/this/dir
+docker pull varcodex/shibarinu_pneumonia_inference:0.666
 ```
 
 ![Screenshot](images/dockerscreen1.jpeg)
@@ -71,7 +72,7 @@ docker images
 #### Step 3: Running the Docker Container
 
 ```
-docker run -v /path/to/your/dataset:/input rsna:0.0.1 python inference.py /input
+docker run --mount type=bind,source=/path/to/your/local/files,target=/input varcodex/shibarinu_pneumonia_inference:0.666 /input
 ```
 ------
 
