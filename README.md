@@ -29,24 +29,24 @@ python train.py path/to/dataset/
 
 note: `path/to/dataset/` must contain _stage_2_train_labels.csv_ and _stage_2_train_images_ directories
 
-If you manage to successfully run train.py (it takes like 6+ hours), the model best.pt should be available in the folder you ran train.py from
+If you manage to successfully run train.py (it takes like 6+ hours), the model `best.pt` should be available in the directory you ran the previous command from
 
-#### Training consisted of two stages:
+#### Why this specific model?
 
 1. Choosing the model:
 
-We decided to explore versions of YOLO model, here is what we noted about the performance of different models:
+We decided to explore versions of YOLO model, and here is what we noted about the performance of its different models:
 
 |  **Model**   | **Minutes per epoch** | **Score** |
 |:------------:|:---------------------:|:---------:|
-|  yolov8n.pt  |           1           |  0.11549  |
-| yolov8n.yaml |           1           |  0.11745  |
-|  yolov8s.pt  |          1.5          |  0.12608  |
-|  yolov8m.pt  |           3           |  0.12076  |
-|  yolov8l.pt  |           6           |  0.13297  |
-| yolov8l.yaml |           6           |  0.12437  |
+|  yolov8n.pt  |          ~1           |  0.11549  |
+| yolov8n.yaml |          ~1           |  0.11745  |
+|  yolov8s.pt  |         ~1.5          |  0.12608  |
+|  yolov8m.pt  |          ~3           |  0.12076  |
+|  yolov8l.pt  |          ~6           |  0.13297  |
+| yolov8l.yaml |          ~6           |  0.12437  |
 
-2. Training the model: Based on previous analysis we decided to train 'yolov8l.pt' model. Model is saved in
+2. Decided to finally train 'yolov8l.pt' model. The trained model is saved at
    `weights/best.pt`
 
 -----
