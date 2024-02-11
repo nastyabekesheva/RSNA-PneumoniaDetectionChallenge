@@ -24,10 +24,12 @@
 #### Run train.py
 
 ```
-python3 train.py path/to/dataset/
+python train.py path/to/dataset/
 ```
 
-**Important note: your dir must contain stage_2_train_labels.csv and stage_2_train_images dirs!**
+note: `path/to/dataset/` must contain _stage_2_train_labels.csv_ and _stage_2_train_images_ directories
+
+If you manage to successfully run train.py (it takes like 6+ hours), the model best.pt should be available in the folder you ran train.py from
 
 #### Training consisted of two stages:
 
