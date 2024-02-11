@@ -48,7 +48,7 @@ def main():
     print('Loading model...')
     model = YOLO(MODEL_PATH)
 
-    results = model(dataset_path, verbose=False, stream=True)
+    results = model(dataset_path, verbose=False, stream=True, conf=0.26)
 
     def get_id_from_path(path):
         return splitext(basename(path))[0]
