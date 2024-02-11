@@ -1,14 +1,14 @@
 # RSNA-PneumoniaDetectionChallenge x team shiba rinu
 
-![Python versions](https://www.python.org/downloads/release/python-3100/)
-
 ## Table of contents
-
+- [Problem description](#Problem description)
+- [Summary](#Summary)
 - [Project structure](#Project-structure)
-- [Preprocessing](#Preprocessing)
-- [Training](#Training)
+- [Requirements](#Requirements)
 - [Running a model (Docker)](#Running-a-model)
 - [Running a model (locally)](#Running-a-model-(locally))
+- [Preprocessing](#Preprocessing)
+- [Training](#Training)
 
 -----
 
@@ -36,7 +36,7 @@ In the end the whole pipeline gives following result on a kaggle test set: `priv
 
 ## Requirements
 
-In order to run the project you will need Python >= 3.10
+*In order to run the project you will need Python >= 3.10*
 
 ## Running a model (Docker)
 
@@ -67,7 +67,6 @@ docker run --mount type=bind,source=/your_home_dir,target=/mount_dir varcodex/sh
 The generated `submissions.csv` file will be saved in the local `/your_home_dir` directory you provided when starting
 the container.
 
-------
 
 ## Running a model (locally)
 
@@ -80,6 +79,9 @@ git clone https://github.com/nastyabekesheva/RSNA-PneumoniaDetectionChallenge.gi
 #### Step 1: Install requirements
 
 ```
+cd RSNA-PneumoniaDetectionChallenge
+python -m venv .env
+.env/Scripts/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
@@ -90,11 +92,11 @@ Before running the script, navigate to the directory you wish submissions.csv to
 
 If you leave the repository directory, remember you need to provide the full path to `inference.py`.
 
-`your/path/to/dataset/` should point to the directory containing *.dcm images.
+`your/path/to/dataset/folder_with_dcm` should point to the directory containing *.dcm images.
 
 
 ```
-python inference.py your/path/to/dataset/
+python inference.py your/path/to/dataset/folder_with_dcm
 ```
 
 -----
@@ -113,7 +115,7 @@ python inference.py your/path/to/dataset/
 
 #### Run train.py
 
-
+```
 python train.py path/to/dataset/
 ```
 
@@ -139,4 +141,3 @@ We decided to explore versions of YOLO model, and here is what we noted about th
 2. Decided to finally train 'yolov8l.pt' model. The trained model is saved at
    `weights/best.pt`
 
------
