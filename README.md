@@ -9,6 +9,16 @@
 
 -----
 
+## Project structure
+
+- [`submission.csv`](submission.csv) - Model predictions for test dataset.
+- [`inference.py`](inference.py) - Model inference. Run to generate submission.csv.
+- [`weights`](outputs) - Folder containing trained model weights.
+- [`train.py`](training.py) - Preprocessing and model training.
+- [`utils`](utils) - Folder with utility scripts used in training and inference.
+- [`yolo8l.pt`, `config.yaml`] - Pretrained model and configuration, essensial for training.
+- [`Dockerfile`](Dockerfile) - Docker configuration file.
+
 ### Preprocessing
 
 1. Creating a dataset of images classified as 'pneumonia positive' and background images.

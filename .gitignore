@@ -162,6 +162,8 @@ cython_debug/
 dataset/
 test_images/
 input/
+dataset_orig/
+dataset_jpg/
 
 kaggle.json
 /rsna-pneumonia-detection-challenge.zip
