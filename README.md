@@ -40,6 +40,8 @@ In the end the whole pipeline gives following results on a kaggle test set: `pri
 
 **In order to run the project you will need Python >= 3.10**
 
+-----
+
 ## Running a model (Docker)
 
 #### Step 0: Make sure that you have the latest version of [Docker](https://www.docker.com/products/docker-desktop/) installed.
@@ -69,6 +71,7 @@ docker run --mount type=bind,source=/your_home_dir,target=/mount_dir varcodex/sh
 The generated `submissions.csv` file will be saved in the local `/your_home_dir` directory you provided when starting
 the container.
 
+-----
 
 ## Running a model (locally)
 
