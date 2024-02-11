@@ -4,8 +4,8 @@
 
 - [Preprocessing](#Preprocessing)
 - [Training](#Training)
-- [Running a model (Docker)](#Running a model (Docker))
-- [Running a model (locally)](#Running a model (locally))
+- [Running a model (Docker)](#Running-a-model-(Docker))
+- [Running a model (locally)](#Running-a-model-(locally))
 
 -----
 
@@ -70,7 +70,7 @@ Your local directory should contain a directory called `dataset` with *.dcm file
 Everything else, including the `target=/mount_dir` **should remain the same**.
 
 ```
-docker run --mount type=bind,source=/your_home_dir,target=/mount_dir varcodex/shibarinu_pneumonia_inference:final
+docker run --mount type=bind,source=/your_home_dir,target=/mount_dir varcodex/shibarinu_pneumonia_inference:final /mount_dir
 ```
 
 #### Step 3: submissions.csv
@@ -88,7 +88,14 @@ the container.
 git clone https://github.com/nastyabekesheva/RSNA-PneumoniaDetectionChallenge.git
 ```
 
-#### Step 1: Run inference.py
+#### Step 1: Install requirements
+
+```
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+#### Step 2: Run inference.py
 
 Before running the script, navigate to the directory you wish submissions.csv to be saved in.
 
