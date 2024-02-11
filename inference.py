@@ -16,6 +16,7 @@ from tqdm import tqdm
 from ultralytics import YOLO
 
 from utils.coordinates import center_to_left_corner
+import os
 
 one = perf_counter()
 print(f'imported modules in {one - zero:.1f}s')
@@ -35,7 +36,6 @@ def main():
     dataset_path.mkdir(exist_ok=True)  # for debugging
 
     two = perf_counter()
-
     glob_ = glob(original_dataset_path + '/*.dcm')
     n_images = len(glob_)
 
@@ -65,7 +65,8 @@ def main():
             line = line.strip()
             file.write(line + "\n")
 
-    print(f'Inference finished. {len(results)} results saved to submission.csv')
+    #print(f'Inference finished. {len(results)} results saved to submission.csv')
+    print(f'Inference finished. Results saved to submission.csv')
 
     print(f'total time {perf_counter() - zero:.1f}s')
 
