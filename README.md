@@ -4,8 +4,8 @@
 
 - [Preprocessing](#Preprocessing)
 - [Training](#Training)
-- [Running a model (Docker)](#Running a model (Docker))
-- [Running a model (locally)](#Running a model (locally))
+- [Running a model (Docker)](#Running-a-model-(Docker))
+- [Running a model (locally)](#Running-a-model-(locally))
 
 -----
 
