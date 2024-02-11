@@ -1,4 +1,4 @@
-# RSNA-PneumoniaDetectionChallenge x Shiba rinu
+# RSNA-PneumoniaDetectionChallenge x team shiba rinu
 
 ## Table of contents
 
@@ -27,7 +27,7 @@
 python train.py path/to/dataset/
 ```
 
-note: `path/to/dataset/` must contain _stage_2_train_labels.csv_ and _stage_2_train_images_ directories
+note: `path/to/dataset/` must contain `stage_2_train_labels.csv` and `stage_2_train_images/`
 
 If you manage to successfully run train.py (it takes like 6+ hours), the model `best.pt` should be available in the directory you ran the previous command from
 
