@@ -38,7 +38,7 @@ In the end the whole pipeline gives following results on a kaggle test set: `pri
 
 ## Requirements
 
-*In order to run the project you will need Python >= 3.10*
+**In order to run the project you will need Python >= 3.10**
 
 ## Running a model (Docker)
 
@@ -107,6 +107,7 @@ python inference.py your/path/to/dataset/folder_with_dcm
 
 1. Creating a dataset of images classified as 'pneumonia positive' and background images.
    Background images are images with no labelled pneumonia that are added to a dataset to reduce False Positives.
+   Dataset structure: ~6k positive examples (all of them), ~600 background images. Both experiments and YOLOv8 guideline confirm this number of background to be optimal.
 2. Splitting dataset into training and validation (90/10).
 3. Converted images from *.dcm to *.jpg (as our model trains on *.jpg).
 4. Switched from left-bottom corner to relative center coordinates (again, model requirement).
