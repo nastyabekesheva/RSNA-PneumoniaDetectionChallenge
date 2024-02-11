@@ -60,7 +60,7 @@ def main():
     n_images = len(glob_)
     print(f'Found {n_images} .dcm images')
 
-    for img_path in tqdm(glob_, desc='.dcm to .jpg', unit=' images'):  # TODO .jpg?
+    for img_path in tqdm(glob_, desc='.dcm to .jpg', unit=' images'):
         dcm_data = pydicom.dcmread(img_path)
         image_array = dcm_data.pixel_array
         image = Image.fromarray(image_array)

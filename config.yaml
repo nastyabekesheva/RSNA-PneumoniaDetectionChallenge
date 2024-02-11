@@ -1,4 +1,4 @@
-path: '/dataset' # dataset root dir
+path: 'E:\Projects\Py\RSNA_PneumoniaDetectionChallenge\transformed_dataset' # dataset root dir
 train: images/train  # train images (relative to 'path')
 val: images/val  # val images (relative to 'path')
 
