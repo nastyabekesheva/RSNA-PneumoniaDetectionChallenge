@@ -4,7 +4,7 @@
 
 - [Preprocessing](#Preprocessing)
 - [Training](#Training)
-- [Running a model (Docker)](#Running-a-model-(Docker))
+- [Running-a model-(Docker)](#Running-a-model-(Docker))
 - [Running a model (locally)](#Running-a-model-(locally))
 
 -----
@@ -110,8 +110,3 @@ If you leave the repository directory, remember you need to provide the full pat
 python inference.py your/path/to/dataset/
 ```
 
-[//]: # (------)
-[//]: # (### Visualizing)
-
-#### Showing off
-![Leaderboard](leaderboard.png)
