@@ -72,7 +72,6 @@ docker images
 
 ```
 docker run -v /path/to/your/dataset:/input rsna:0.0.1 python inference.py /input
-
 ```
 ------
 
