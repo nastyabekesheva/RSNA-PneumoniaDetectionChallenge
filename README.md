@@ -1,5 +1,7 @@
 # RSNA-PneumoniaDetectionChallenge x team shiba rinu
 
+![Python versions](https://www.python.org/downloads/release/python-3100/)
+
 ## Table of contents
 
 - [Project structure](#Project-structure)
@@ -31,6 +33,10 @@ In the end the whole pipeline gives following result on a kaggle test set: `priv
 - [`utils`](utils) - Folder with utility scripts used in training and inference.
 - `yolo8l.pt`, `config.yaml` - Pretrained model and configuration, essensial for training.
 - [`Dockerfile`](Dockerfile) - Docker configuration file.
+
+## Requirements
+
+In order to run the project you will need Python >= 3.10
 
 ## Running a model (Docker)
 
