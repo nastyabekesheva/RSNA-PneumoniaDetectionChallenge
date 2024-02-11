@@ -1,4 +1,4 @@
-# RSNA-PneumoniaDetectionChallenge
+# RSNA-PneumoniaDetectionChallenge x Shiba rinu
 
 ## Table of contents
 
