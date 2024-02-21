@@ -33,7 +33,7 @@ In the end the whole pipeline gives following results on a kaggle test set: `pri
 - [`weights`](outputs) - Folder containing trained model weights.
 - [`train.py`](training.py) - Preprocessing and model training.
 - [`utils`](utils) - Folder with utility scripts used in training and inference.
-- `yolo8l.pt`, `config.yaml` - Pretrained model and configuration, essensial for training.
+- `yolo8l.pt`- Pretrained model used as a base for training
 - [`Dockerfile`](Dockerfile) - Docker configuration file.
 
 ## Requirements
